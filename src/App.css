@@ -1,0 +1,12 @@
+.margin-top {
+    margin-top: 10%;
+}
+
+.navbar-footer-wrapper {
+    list-style: none;
+    display: inline-block;
+}
+
+.tile.is-ancestor {
+    margin: .75em .75em 0;
+}
