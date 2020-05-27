@@ -10,3 +10,20 @@
 .tile.is-ancestor {
     margin: .75em .75em 0;
 }
+
+.listItem {
+    padding: 10px 0;
+}
+
+.listItem-checkbox {
+    margin-right: 15px;
+
+}
+
+.listItem--text {
+    margin: 10px;
+}
+
+.delete.is-small {
+    top: 5px;
+}

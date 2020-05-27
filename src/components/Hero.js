@@ -17,7 +17,7 @@ function Hero(props) {
                     <button
                         onClick={displayHeroText}
                         className="button">
-                        Hero Button
+                        Action Button
                     </button>
                 </div>
             </div>

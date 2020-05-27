@@ -15,10 +15,17 @@ function App() {
     }
   return (
     <div className="App">
-      <Header action={displayText} menuItems={menuItems} />
-      <Hero action={displayText} />
+      <Header
+          action={displayText}
+          menuItems={menuItems}
+      />
+      <Hero
+          action={displayText}
+      />
       <MainContent />
-      <Footer menuItems={menuItems} />
+      <Footer
+          menuItems={menuItems}
+      />
     </div>
   );
 }

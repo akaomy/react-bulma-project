@@ -7,7 +7,6 @@ function HeaderMenuItem(props) {
     return (
         <a
             href="#"
-            key={props.menuItem}
             onClick={displayTextMenuItem}
             className="navbar-item"
         >

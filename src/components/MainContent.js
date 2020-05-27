@@ -1,7 +1,24 @@
-import React from "react";
+import React, {useState} from "react";
 import '../App.css'
+import LeftHand from "./LeftHand";
+import RightHand from "./RightHand";
+import TodoInput from "./ToDo/TodoInput";
+import ListOfItems from "./ToDo/ListOfItems";
 
 function MainContent() {
+    const [isDone] = useState();
+    let rightClicked = 10;
+
+    const eventHandler = () => {
+        console.log('clicked');
+        let rightClicked = 20;
+    }
+
+    const handleChange = (e) => {
+        let userInput = e.target.value;
+        return <p>{userInput}</p> // need state here
+    }
+
     return (
         <div className="tile is-ancestor tile-margin-top">
             <div className="tile is-4 is-vertical is-parent">
@@ -12,22 +29,25 @@ function MainContent() {
                         content.</p>
                 </div>
                 <div className="tile is-child box">
-                    <h2 className="title">Source text</h2>
+                    <h2 className="title">Counter</h2>
+                    <LeftHand actionClick={eventHandler} />
+                    <RightHand rightData={rightClicked}/>
                     <p>The discovery of the text's origin is attributed to Richard McClintock, a Latin scholar at
                         Hampden–Sydney College. McClintock connected Lorem ipsum to Cicero's writing sometime
                         before 1982 while searching for instances of the Latin word consectetur, which was rarely
                         used in classical literature.[4] McClintock first published his discovery in a 1994 letter
                         to the editor of Before & After magazine, contesting the editor's earlier claim that Lorem
                         ipsum had no meaning.[5]</p>
+                    <img src="https://via.placeholder.com/850x500" alt="placeholder"/>
                 </div>
             </div>
             <div className="tile is-parent">
                 <div className="tile is-child box">
-                    <h2 className="title">Variations</h2>
-                    <p>Lorem ipsum passages were popularized on Letraset dry-transfer sheets from the early 1970s,
-                        which were produced to be used by graphic designers for filler text.[3][4] Aldus Corporation
-                        created a version in the mid-1980s for their desktop publishing program PageMaker.</p>
-                    <img src="https://via.placeholder.com/850x500" alt="placeholder"/>
+                    <h2 className="title">ToDo list</h2>
+                    <section className="box">
+                        <TodoInput handleClick={handleChange}/>
+                        <ListOfItems />
+                    </section>
                 </div>
             </div>
         </div>
