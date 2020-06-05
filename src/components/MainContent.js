@@ -1,22 +1,21 @@
 import React, {useState} from "react";
 import '../App.css'
-import LeftHand from "./LeftHand";
-import RightHand from "./RightHand";
+import LeftHand from "./Counter/LeftHand";
+import RightHand from "./Counter/RightHand";
 import TodoInput from "./ToDo/TodoInput";
 import ListOfItems from "./ToDo/ListOfItems";
 
 function MainContent() {
-    const [isDone] = useState();
-    let rightClicked = 10;
 
-    const eventHandler = () => {
-        console.log('clicked');
-        let rightClicked = 20;
+    const [count, setCount] = useState(0);
+
+    const clickHandler = (newCount) => {
+        setCount(newCount);
     }
-
+    
     const handleChange = (e) => {
         let userInput = e.target.value;
-        return <p>{userInput}</p> // need state here
+        return <p>{userInput}</p>
     }
 
     return (
@@ -30,8 +29,11 @@ function MainContent() {
                 </div>
                 <div className="tile is-child box">
                     <h2 className="title">Counter</h2>
-                    <LeftHand actionClick={eventHandler} />
-                    <RightHand rightData={rightClicked}/>
+                    <LeftHand 
+                        count={count} 
+                        changeCount={clickHandler}
+                    />
+                    <RightHand rightData={count} />
                     <p>The discovery of the text's origin is attributed to Richard McClintock, a Latin scholar at
                         Hampden–Sydney College. McClintock connected Lorem ipsum to Cicero's writing sometime
                         before 1982 while searching for instances of the Latin word consectetur, which was rarely
