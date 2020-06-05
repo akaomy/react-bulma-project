@@ -3,11 +3,11 @@ import React from 'react';
 function LeftHand(props) {
 
     const increaseVal = () => {
-        props.changeCount(props.count + 1);
+        props.changeCount(props.count + props.step);
     }
 
     const decreaseVal = (e) => {
-        props.changeCount(props.count - 1); 
+        props.changeCount(props.count - props.step); 
     }
 
     return (

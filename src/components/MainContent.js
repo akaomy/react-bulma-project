@@ -8,6 +8,7 @@ import ListOfItems from "./ToDo/ListOfItems";
 function MainContent() {
 
     const [count, setCount] = useState(0);
+    const [step, setStep] = useState(2);
 
     const clickHandler = (newCount) => {
         setCount(newCount);
@@ -32,6 +33,7 @@ function MainContent() {
                     <LeftHand 
                         count={count} 
                         changeCount={clickHandler}
+                        step={step}
                     />
                     <RightHand rightData={count} />
                     <p>The discovery of the text's origin is attributed to Richard McClintock, a Latin scholar at
