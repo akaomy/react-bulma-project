@@ -32,6 +32,7 @@ function MainContent() {
                     <p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to
                         demonstrate the visual form of a document or a typeface without relying on meaningful
                         content.</p>
+                    <img src="https://via.placeholder.com/850x500" alt="placeholder"/>
                 </div>
                 <div className="tile is-child box">
                     <h2 className="title">Counter</h2>
@@ -42,13 +43,7 @@ function MainContent() {
                     />
                     <RightHand rightData={count} />
                     <StepConfig onStepChange={onStepChange}/>
-                    <p>The discovery of the text's origin is attributed to Richard McClintock, a Latin scholar at
-                        Hampden–Sydney College. McClintock connected Lorem ipsum to Cicero's writing sometime
-                        before 1982 while searching for instances of the Latin word consectetur, which was rarely
-                        used in classical literature.[4] McClintock first published his discovery in a 1994 letter
-                        to the editor of Before & After magazine, contesting the editor's earlier claim that Lorem
-                        ipsum had no meaning.[5]</p>
-                    <img src="https://via.placeholder.com/850x500" alt="placeholder"/>
+                    <div id="error-msg"></div>
                 </div>
             </div>
             <div className="tile is-parent">
