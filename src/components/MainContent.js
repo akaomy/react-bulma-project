@@ -4,6 +4,7 @@ import LeftHand from "./Counter/LeftHand";
 import RightHand from "./Counter/RightHand";
 import TodoInput from "./ToDo/TodoInput";
 import ListOfItems from "./ToDo/ListOfItems";
+import StepConfig from "./Counter/StepConfig";
 
 function MainContent() {
 
@@ -12,6 +13,10 @@ function MainContent() {
 
     const clickHandler = (newCount) => {
         setCount(newCount);
+    }
+
+    const onStepChange = (val) => {
+        setStep(val);
     }
     
     const handleChange = (e) => {
@@ -36,6 +41,7 @@ function MainContent() {
                         step={step}
                     />
                     <RightHand rightData={count} />
+                    <StepConfig onStepChange={onStepChange}/>
                     <p>The discovery of the text's origin is attributed to Richard McClintock, a Latin scholar at
                         Hampden–Sydney College. McClintock connected Lorem ipsum to Cicero's writing sometime
                         before 1982 while searching for instances of the Latin word consectetur, which was rarely
