@@ -24,6 +24,14 @@ function MainContent() {
         return <p>{userInput}</p>
     }
 
+    const load = () => {
+        fetch('https://jsonplaceholder.typicode.com/users')
+            .then(response => response.json())
+            .then(json => setUsers(json))
+    }
+
+    const [users, setUsers] = useState([]);
+
     return (
         <div className="tile is-ancestor tile-margin-top">
             <div className="tile is-4 is-vertical is-parent">
@@ -32,7 +40,10 @@ function MainContent() {
                     <p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to
                         demonstrate the visual form of a document or a typeface without relying on meaningful
                         content.</p>
-                    <img src="https://via.placeholder.com/850x500" alt="placeholder"/>
+                    <button onClick={load}>fetch data</button>
+                    <ul>
+                        {users.map(el => <li key={el.id}>{el.name}</li>)}
+                    </ul>
                 </div>
                 <div className="tile is-child box">
                     <h2 className="title">Counter</h2>

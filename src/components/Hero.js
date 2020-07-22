@@ -9,15 +9,15 @@ function Hero(props) {
             <div className="hero-body">
                 <div className="container">
                     <h1 className="title">
-                        Lorem ipsum
+                        Interactive Elements
                     </h1>
                     <h2 className="subtitle">
-                        From Wikipedia, the free encyclopedia
+                        This is the page where I showcase interactive web elements
                     </h2>
                     <button
                         onClick={displayHeroText}
                         className="button">
-                        Action Button
+                        Show me
                     </button>
                 </div>
             </div>
