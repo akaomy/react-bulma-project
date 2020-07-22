@@ -5,6 +5,7 @@ import RightHand from "./Counter/RightHand";
 import TodoInput from "./ToDo/TodoInput";
 import ListOfItems from "./ToDo/ListOfItems";
 import StepConfig from "./Counter/StepConfig";
+import StartPage from "./BreakoutGame2d/StartPage";
 
 function MainContent() {
 
@@ -60,6 +61,7 @@ function MainContent() {
                 <div className="tile is-parent">
                     <div className="tile is-child box">
                         <h2 className="title">Breakout 2d</h2>
+                        <StartPage />
                     </div>
                 </div>
             </div>
