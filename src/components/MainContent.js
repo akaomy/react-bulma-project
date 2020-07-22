@@ -33,40 +33,48 @@ function MainContent() {
     const [users, setUsers] = useState([]);
 
     return (
-        <div className="tile is-ancestor tile-margin-top">
-            <div className="tile is-4 is-vertical is-parent">
-                <div className="tile is-child box">
-                    <h2 className="title">Lorem ipsum</h2>
-                    <p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to
-                        demonstrate the visual form of a document or a typeface without relying on meaningful
-                        content.</p>
-                    <button onClick={load}>fetch data</button>
-                    <ul>
-                        {users.map(el => <li key={el.id}>{el.name}</li>)}
-                    </ul>
+        <>
+            <div className="tile is-ancestor tile-margin-top">
+                <div className="tile is-4 is-vertical is-parent">
+                    <div className="tile is-child box">
+                        <h2 className="title">Fetching data on btn click</h2>
+                        <button onClick={load}>fetch data</button>
+                        <ul>
+                            {users.map(el => <li key={el.id}>{el.name}</li>)}
+                        </ul>
+                    </div>
+                    <div className="tile is-child box">
+                        <h2 className="title">Counter</h2>
+                        <p>Enter number of steps you want to decrease or increase counter.</p>
+                        <p>Default step is 2.</p>
+                        <LeftHand
+                            count={count}
+                            changeCount={clickHandler}
+                            step={step}
+                        />
+                        <RightHand rightData={count} />
+                        <StepConfig onStepChange={onStepChange}/>
+                        <div id="error-msg"></div>
+                    </div>
                 </div>
-                <div className="tile is-child box">
-                    <h2 className="title">Counter</h2>
-                    <LeftHand 
-                        count={count} 
-                        changeCount={clickHandler}
-                        step={step}
-                    />
-                    <RightHand rightData={count} />
-                    <StepConfig onStepChange={onStepChange}/>
-                    <div id="error-msg"></div>
-                </div>
-            </div>
-            <div className="tile is-parent">
-                <div className="tile is-child box">
-                    <h2 className="title">ToDo list</h2>
-                    <section className="box">
-                        <TodoInput handleClick={handleChange}/>
-                        <ListOfItems />
-                    </section>
+                <div className="tile is-parent">
+                    <div className="tile is-child box">
+                        <h2 className="title">Breakout 2d</h2>
+                    </div>
                 </div>
             </div>
-        </div>
+            <div>
+                <div className="tile is-parent is-8">
+                    <div className="tile is-child box">
+                        <h2 className="title">ToDo list</h2>
+                        <section className="box">
+                            <TodoInput handleClick={handleChange}/>
+                            <ListOfItems />
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </>
     );
 }
 
