@@ -12,8 +12,8 @@ function LeftHand(props) {
 
     return (
         <div>
-            <button onClick={decreaseVal}>+</button>
-            <button onClick={increaseVal}>-</button>
+            <button onClick={decreaseVal}>-</button>
+            <button onClick={increaseVal}>+</button>
         </div>
     )
 }
