@@ -35,17 +35,10 @@ function MainContent() {
 
     return (
         <>
-            <div className="tile is-ancestor tile-margin-top">
-                <div className="tile is-4 is-vertical is-parent">
-                    <div className="tile is-child box">
-                        <h2 className="title">Fetching data on btn click</h2>
-                        <button onClick={load}>fetch data</button>
-                        <ul>
-                            {users.map(el => <li key={el.id}>{el.name}</li>)}
-                        </ul>
-                    </div>
-                    <div className="tile is-child box">
-                        <h2 className="title">Counter</h2>
+            <div className="tile is-ancestor">
+                <div className="tile is-parent">
+                    <article className="tile is-child box">
+                        <p className="title">Counter</p>
                         <p>Enter number of steps you want to decrease or increase counter.</p>
                         <p>Default step is 2.</p>
                         <LeftHand
@@ -56,24 +49,37 @@ function MainContent() {
                         <RightHand rightData={count} />
                         <StepConfig onStepChange={onStepChange}/>
                         <div id="error-msg"></div>
-                    </div>
+                    </article>
                 </div>
                 <div className="tile is-parent">
-                    <div className="tile is-child box">
-                        <h2 className="title">Breakout 2d</h2>
-                        <StartPage />
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div className="tile is-parent is-8">
-                    <div className="tile is-child box">
-                        <h2 className="title">ToDo list</h2>
+                    <article className="tile is-child box">
+                        <p className="title">ToDo list</p>
                         <section className="box">
                             <TodoInput handleClick={handleChange}/>
                             <ListOfItems />
                         </section>
+                    </article>
+                </div>
+            </div>
+            <div className="tile is-ancestor">
+                    <div className="tile is-parent">
+                        <article className="tile is-child box">
+                            <div className="content">
+                                <p className="title">Fetching data on btn click</p>
+                                <button className="button" onClick={load}>fetch data</button>
+                                <ul>
+                                    {users.map(el => <li key={el.id}>{el.name}</li>)}
+                                </ul>
+                            </div>
+                        </article>
                     </div>
+                    <div className="tile is-parent">
+                        <article className="tile is-child box">
+                            <div className="content">
+                                <p className="title">Breakout 2d</p>
+                                {/*TODO: <StartPage />*/}
+                            </div>
+                        </article>
                 </div>
             </div>
         </>
