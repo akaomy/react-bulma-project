@@ -9,6 +9,11 @@ import MainContent from './components/MainContent'
 function App() {
 
     const menuItems = ['Home', 'Documentation', "About", "Contact"];
+    const sn = (<img src="https://bulma.io/images/bulma-logo.png"
+                     width="112"
+                     height="28"
+                     alt="logo"
+                />);
 
     const displayText = (btn) => {
         console.log(`${btn} has been clicked`)
@@ -18,13 +23,15 @@ function App() {
       <Header
           action={displayText}
           menuItems={menuItems}
+          siteLogo={sn}
       />
-      <Hero
-          action={displayText}
-      />
+      {/*<Hero*/}
+      {/*    action={displayText}*/}
+      {/*/>*/}
       <MainContent />
       <Footer
           menuItems={menuItems}
+          siteLogo={sn}
       />
     </div>
   );

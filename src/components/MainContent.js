@@ -5,7 +5,7 @@ import RightHand from "./Counter/RightHand";
 import TodoInput from "./ToDo/TodoInput";
 import ListOfItems from "./ToDo/ListOfItems";
 import StepConfig from "./Counter/StepConfig";
-import StartPage from "./BreakoutGame2d/StartPage";
+// import StartPage from "./BreakoutGame2d/StartPage";
 
 function MainContent() {
 
@@ -53,33 +53,40 @@ function MainContent() {
                 </div>
                 <div className="tile is-parent">
                     <article className="tile is-child box">
+                        <p className="title">Counter 2</p>
+                    </article>
+                </div>
+            </div>
+            <div className="tile is-ancestor">
+                <div className="tile is-parent">
+                    <article className="tile is-child box">
+                        <div className="content">
+                            <p className="title">Fetching data on btn click</p>
+                            <button className="button" onClick={load}>fetch data</button>
+                            <ul>
+                                {users.map(el => <li key={el.id}>{el.name}</li>)}
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+                <div className="tile is-parent">
+                    <article className="tile is-child box">
+                        <div className="content">
+                            <p className="title">Breakout 2d</p>
+                            {/*TODO: <StartPage />*/}
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <div className="tile is-ancestor">
+                <div className="tile is-parent">
+                    <article className="tile is-child box">
                         <p className="title">ToDo list</p>
                         <section className="box">
                             <TodoInput handleClick={handleChange}/>
                             <ListOfItems />
                         </section>
                     </article>
-                </div>
-            </div>
-            <div className="tile is-ancestor">
-                    <div className="tile is-parent">
-                        <article className="tile is-child box">
-                            <div className="content">
-                                <p className="title">Fetching data on btn click</p>
-                                <button className="button" onClick={load}>fetch data</button>
-                                <ul>
-                                    {users.map(el => <li key={el.id}>{el.name}</li>)}
-                                </ul>
-                            </div>
-                        </article>
-                    </div>
-                    <div className="tile is-parent">
-                        <article className="tile is-child box">
-                            <div className="content">
-                                <p className="title">Breakout 2d</p>
-                                {/*TODO: <StartPage />*/}
-                            </div>
-                        </article>
                 </div>
             </div>
         </>

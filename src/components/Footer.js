@@ -18,6 +18,7 @@ function Footer(props) {
                         </li>
                     )}
                 </p>
+                <p>{props.siteLogo}</p>
             </div>
         </footer>
     )
