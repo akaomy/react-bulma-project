@@ -62,6 +62,13 @@ function MainContent() {
             <div className="tile is-ancestor">
                 <div className="tile is-parent">
                     <article className="tile is-child box">
+                        <p className="title">Counter3</p>
+                    </article>
+                </div>
+            </div>
+            <div className="tile is-ancestor">
+                <div className="tile is-parent">
+                    <article className="tile is-child box">
                         <div className="content">
                             <p className="title">Fetching data on btn click</p>
                             <button className="button" onClick={load}>fetch data</button>
