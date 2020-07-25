@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 export default function CounterRandomOneTen() {
+
     const [counter, setCount] = useState(0);
 
     const add = () => {
@@ -8,7 +9,7 @@ export default function CounterRandomOneTen() {
     }
 
     const remove = () => {
-        setCount(counter - Math.floor(Math.random() * Math.floor(10)))
+        setCount(counter - Math.floor(Math.random() * Math.floor(10)));
     }
 
     return (
