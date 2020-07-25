@@ -23,7 +23,7 @@ function App() {
       <Header
           action={displayText}
           menuItems={menuItems}
-          siteLogo={sn}
+          headerLogo={sn}
       />
       {/*<Hero*/}
       {/*    action={displayText}*/}
@@ -31,7 +31,7 @@ function App() {
       <MainContent />
       <Footer
           menuItems={menuItems}
-          siteLogo={sn}
+          footerLogo={sn}
       />
     </div>
   );

@@ -6,7 +6,7 @@ function Header(props) {
         <nav className="navbar" role="navigation" aria-label="main navigation">
             <div className="navbar-brand">
                 <a className="navbar-item" href="https://bulma.io">
-                    {props.siteLogo}
+                    {props.headerLogo}
                 </a>
             </div>
             <div id="navbarBasicExample" className="navbar-menu">
