@@ -11,15 +11,16 @@ export default function Counter3() {
 
     return (
         <>
-            <p className="title">Counter3</p>
-            <div className="container3-counter">
-                <div className="container3-btns">
+            <div className="level">
+                <div className="level-left">
                     {posCounters.map((el, i) =>
                         <CountBtn counter={el} />
                     )}
                 </div>
-                <p className="counter3--init-val">initial value: {0} </p>
-                <div className="container3-btns">
+                <div className="level-item">
+                    initial value: {0}
+                </div>
+                <div className="level-right">
                     {negCounters.map((el, i) =>
                         <CountBtn counter={el} />
                     )}
