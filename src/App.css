@@ -45,3 +45,8 @@
     color: white;
     border: none;
 }
+
+.container-test {
+    max-width: 550px;
+    margin: 0 auto;
+}

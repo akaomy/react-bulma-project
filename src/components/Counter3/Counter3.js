@@ -11,19 +11,22 @@ export default function Counter3() {
 
     return (
         <>
-            <div className="level">
-                <div className="level-left">
-                    {posCounters.map((el, i) =>
-                        <CountBtn counter={el} />
-                    )}
-                </div>
-                <div className="level-item">
-                    initial value: {0}
-                </div>
-                <div className="level-right">
-                    {negCounters.map((el, i) =>
-                        <CountBtn counter={el} />
-                    )}
+            <p className="title">Counter 3</p>
+            <div className="container-test">
+                <div className="level">
+                    <div className="level-left">
+                        {posCounters.map((el, i) =>
+                            <CountBtn counter={el} />
+                        )}
+                    </div>
+                    <div className="level-item">
+                        initial value: {0}
+                    </div>
+                    <div className="level-right">
+                        {negCounters.map((el, i) =>
+                            <CountBtn counter={el} />
+                        )}
+                    </div>
                 </div>
             </div>
         </>
