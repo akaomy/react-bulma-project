@@ -9,7 +9,6 @@ export default function CounterDisplay() {
     const negCounters = [-3,-2,-1];
 
     const updateCounter = (n) => {
-        console.log('count', count);
         setCount(n);
     }
 
@@ -34,7 +33,7 @@ export default function CounterDisplay() {
                         {negCounters.map((el, i) =>
                             <CountBtn
                                 value={el}
-                                key={i}
+                                key={i}AddCounter
                                 count={count}
                                 updateCounter={updateCounter}
                             />
