@@ -41,15 +41,18 @@ function MainContent() {
                 <div className="tile is-parent">
                     <article className="tile is-child box">
                         <p className="title">Counter</p>
-                        <p>Enter number of steps you want to decrease or increase counter.</p>
-                        <p>Default step is 2.</p>
-                        <LeftHand
-                            count={count}
-                            changeCount={clickHandler}
-                            step={step}
-                        />
-                        <RightHand rightData={count} />
-                        <StepConfig onStepChange={onStepChange}/>
+                        <p>Enter number of steps you want to decrease or increase counter. Default step is 2.</p>
+                        <div className="level-item counter-pdg1">
+                            <LeftHand
+                                count={count}
+                                changeCount={clickHandler}
+                                step={step}
+                            />
+                            <RightHand rightData={count} />
+                        </div>
+                        <div className="level-item counter-pdg2">
+                            <StepConfig onStepChange={onStepChange}/>
+                        </div>
                         <div id="error-msg"></div>
                     </article>
                 </div>

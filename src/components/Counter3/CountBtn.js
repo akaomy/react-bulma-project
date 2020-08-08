@@ -3,7 +3,7 @@ import '../../App.css';
 
 export default function CountBtn(props) {
     const send = () => {
-        props.updateCounter(props.value + props.count)
+        props.updateCounter(props.value + props.count);
     }
 
     return (

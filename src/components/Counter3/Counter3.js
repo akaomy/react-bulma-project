@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import CounterDisplay from "./CounterDisplay";
-import AddCounter from "./AddCounter";
 
 import '../../App.css';
+// import AddCounter from "./AddCounter";
 
 export default function Counter3() {
     const [counters, setCounters] = useState([4, 11]);
@@ -15,7 +15,7 @@ export default function Counter3() {
             <CounterDisplay />
             <hr/>
             <CounterDisplay />
-            <AddCounter />
+            {/*<AddCounter />*/}
         </>
     )
 }

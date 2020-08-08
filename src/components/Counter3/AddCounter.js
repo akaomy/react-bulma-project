@@ -1,9 +1,11 @@
 import React from "react";
 
-export default function AddCounter() {
+export default function AddCounter(props) {
     const addCounter = () => {
-        console.log('add new counter')
+        // props.setCount([...props.count, 2]);
+        // console.log(props.addCounter())
     }
+
     return(
         <button
             onClick={addCounter}

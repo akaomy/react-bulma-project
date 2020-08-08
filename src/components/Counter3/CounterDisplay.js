@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import CountBtn from "./CountBtn";
-
+import AddCounter from "./AddCounter";
 import '../../App.css';
 
 export default function CounterDisplay() {
@@ -10,6 +10,10 @@ export default function CounterDisplay() {
 
     const updateCounter = (n) => {
         setCount(n);
+    }
+
+    const addCounter = () => {
+        setCount([...count, 5]);
     }
 
     return (
@@ -33,13 +37,14 @@ export default function CounterDisplay() {
                         {negCounters.map((el, i) =>
                             <CountBtn
                                 value={el}
-                                key={i}AddCounter
+                                key={i}
                                 count={count}
                                 updateCounter={updateCounter}
                             />
                         )}
                     </div>
                 </div>
+                {/*<AddCounter addCounter={addCounter} />*/}
             </div>
         </>
     )
