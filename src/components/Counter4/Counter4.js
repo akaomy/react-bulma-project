@@ -1,28 +1,49 @@
-import React, {useState} from "react";
-import CounterNum from "./CounterNum";
+import React, { useState } from 'react';
+import CounterNum from './CounterNum';
 
 export default function Counter4() {
 
-    const [numbers, setCounters] = useState([0]);
+    const [counters, setCounters] = useState([0]);
     const addCounter = () => {
-        setCounters([...numbers, Math.round(Math.random() * 10)])
+        setCounters([...counters, Math.round(Math.random() * 10)])
     }
     const plusOne = (index) => {
-        setCounters([numbers[index] + 1])
+        const newCounters = [...counters];
+        newCounters[index] += 1;
+        setCounters(newCounters);
+        console.log(index)
     }
     const minusOne = (index) => {
-        setCounters([numbers[index] - 1])
+        const newCounters = [...counters];
+        newCounters[index] -= 1;
+        setCounters(newCounters);
+        console.log(index)
+    }
+    const deleteCounter = (index) => {
+        const newCounters = [...counters];
+        newCounters.splice(index, 1);
+        setCounters(newCounters);
+        console.log(newCounters);
+    }
+    const resetCounter = (index) => {
+        const newCounters = [...counters];
+        newCounters[index] -= 1;
+        setCounters(newCounters);
+        console.log(index)
     }
 
     return (
         <>
-            {numbers.map((el, i) =>
+            {counters.map((el, i) =>
                 <CounterNum
                     count={el}
                     key={i}
                     index={i}
                     plus={plusOne}
                     minus={minusOne}
+                    deleteCounter={deleteCounter}
+                    resetCounter={resetCounter}
+
                 />
             )}
             <button
