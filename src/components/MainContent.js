@@ -7,6 +7,7 @@ import ListOfItems from "./ToDo/ListOfItems";
 import StepConfig from "./Counter/StepConfig";
 import Counter2 from "./Counter2/Counter2";
 import Counter3 from "./Counter3/Counter3";
+import Counter4 from "./Counter4/Counter4";
 // import StartPage from "./BreakoutGame2d/StartPage";
 
 function MainContent() {
@@ -66,9 +67,15 @@ function MainContent() {
             <div className="tile is-ancestor">
                 <div className="tile is-parent">
                     <article className="tile is-child box">
-                        <Counter3/>
+                        <Counter3 />
                     </article>
                 </div>
+            </div>
+            <div className="tile is-parent">
+                <article className="tile is-child box">
+                    <p className="title">Counter4</p>
+                    <Counter4 />
+                </article>
             </div>
             <div className="tile is-ancestor">
                 <div className="tile is-parent">

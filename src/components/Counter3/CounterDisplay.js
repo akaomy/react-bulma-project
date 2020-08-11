@@ -12,9 +12,9 @@ export default function CounterDisplay() {
         setCount(n);
     }
 
-    const addCounter = () => {
-        setCount([...count, 5]);
-    }
+    // const addCounter = () => {
+    //     setCount([...count, 'count']);
+    // }
 
     return (
         <>
@@ -31,7 +31,7 @@ export default function CounterDisplay() {
                         )}
                     </div>
                     <div className="level-item">
-                        initial value: {count}
+                        your value: {count}
                     </div>
                     <div className="level-right">
                         {negCounters.map((el, i) =>
@@ -45,6 +45,12 @@ export default function CounterDisplay() {
                     </div>
                 </div>
                 {/*<AddCounter addCounter={addCounter} />*/}
+                <button
+                    className="button"
+                    // onClick={addCounter}
+                >
+                    Add counter
+                </button>
             </div>
         </>
     )

@@ -1,7 +1,12 @@
 import React from "react";
 
 export default function CounterTitle(props) {
+    // const {
+    //     addCounter,
+    //     countNumber
+    // } = this.props;
+
     return(
-        <p>Counter with add btn: {props.countNumber}</p>
+        <button className="button">{props.count}</button>
     )
 }
