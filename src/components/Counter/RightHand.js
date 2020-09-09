@@ -3,7 +3,7 @@ import React from 'react';
 function RightHand(props) {
 
     return (
-        <div>{props.rightData}</div>
+        <div className="level-item">{props.rightData}</div>
     )
 }
 

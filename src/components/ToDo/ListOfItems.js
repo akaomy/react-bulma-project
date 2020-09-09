@@ -5,7 +5,7 @@ function TodoInput() {
     const allTasks = [
         {
             id: Math.random(),
-            name: 'First todo',
+            name: 'finish interactive functionality for this list',
             isDone: false
         },
         {
