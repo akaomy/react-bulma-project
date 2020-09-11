@@ -29,7 +29,7 @@ function TodoInput() {
                                     <input className="listItem--text" type="checkbox" />
                                     {item.name}
                                 </label>
-                                <a className="delete is-small"></a>
+                                <a href="#" className="delete is-small"></a>
                             </li>
                         )
                     })}

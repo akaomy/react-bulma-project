@@ -8,7 +8,7 @@ import MainContent from './components/MainContent'
 
 function App() {
 
-    const menuItems = ['Home', 'Documentation', "About", "Contact"];
+    const menuItems = ['Home', "About", "Contact"];
     const sn = (<img src="https://bulma.io/images/bulma-logo.png"
                      width="112"
                      height="28"
