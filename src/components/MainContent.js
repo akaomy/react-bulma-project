@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import '../App.css'
 import LeftHand from "./Counter/LeftHand";
 import RightHand from "./Counter/RightHand";
@@ -6,10 +6,7 @@ import TodoInput from "./ToDo/TodoInput";
 import ListOfItems from "./ToDo/ListOfItems";
 import StepConfig from "./Counter/StepConfig";
 import Counter2 from "./Counter2/Counter2";
-import Counter3 from "./Counter3/Counter3";
 import Counter4 from "./Counter4/Counter4";
-import SimpleToDo from "./SimpleToDo/SimpleToDo";
-// import StartPage from "./BreakoutGame2d/StartPage";
 
 function MainContent() {
 
@@ -65,22 +62,12 @@ function MainContent() {
                     </article>
                 </div>
             </div>
-            <div className="tile is-ancestor">
-                <div className="tile is-parent">
-                    <article className="tile is-child box">
-                        <Counter3 />
-                    </article>
-                </div>
-            </div>
             <div className="tile is-parent">
                 <article className="tile is-child box">
                     <p className="title">Counter4</p>
                     <Counter4 />
                 </article>
-            </div>
-            <div className="tile is-ancestor">
-                <div className="tile is-parent">
-                    <article className="tile is-child box">
+                <article className="tile is-child box">
                         <div className="content">
                             <p className="title">Fetching data on btn click</p>
                             <button className="button" onClick={load}>fetch data</button>
@@ -88,32 +75,18 @@ function MainContent() {
                                 {users.map(el => <li key={el.id}>{el.name}</li>)}
                             </ul>
                         </div>
-                    </article>
-                </div>
-                <div className="tile is-parent">
-                    <article className="tile is-child box">
-                        <div className="content">
-                            <p className="title">Breakout 2d</p>
-                            {/*TODO: <StartPage />*/}
-                        </div>
-                    </article>
-                </div>
+                </article>
             </div>
             <div className="tile is-ancestor">
                 <div className="tile is-parent">
-                    <article className="tile is-child box">
-                        <p className="title">simple ToDo list</p>
-                        <section className="box">
-                            <SimpleToDo />
-                        </section>
-                    </article>
-                    <article className="tile is-child box">
+                    {/* TODO */}
+                    {/* <article className="tile is-child box">
                         <p className="title">ToDo list</p>
                         <section className="box">
                             <TodoInput handleClick={handleChange}/>
                             <ListOfItems />
                         </section>
-                    </article>
+                    </article> */}
                 </div>
             </div>
         </>
