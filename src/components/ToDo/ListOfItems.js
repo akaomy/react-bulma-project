@@ -5,7 +5,7 @@ function TodoInput() {
     const allTasks = [
         {
             id: Math.random(),
-            name: 'First todo',
+            name: 'finish interactive functionality for this list',
             isDone: false
         },
         {
@@ -29,7 +29,7 @@ function TodoInput() {
                                     <input className="listItem--text" type="checkbox" />
                                     {item.name}
                                 </label>
-                                <a className="delete is-small"></a>
+                                <a href="#" className="delete is-small"></a>
                             </li>
                         )
                     })}

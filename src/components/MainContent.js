@@ -5,6 +5,11 @@ import RightHand from "./Counter/RightHand";
 import TodoInput from "./ToDo/TodoInput";
 import ListOfItems from "./ToDo/ListOfItems";
 import StepConfig from "./Counter/StepConfig";
+import Counter2 from "./Counter2/Counter2";
+import Counter3 from "./Counter3/Counter3";
+import Counter4 from "./Counter4/Counter4";
+import SimpleToDo from "./SimpleToDo/SimpleToDo";
+// import StartPage from "./BreakoutGame2d/StartPage";
 
 function MainContent() {
 
@@ -24,38 +29,94 @@ function MainContent() {
         return <p>{userInput}</p>
     }
 
+    const load = () => {
+        fetch('https://jsonplaceholder.typicode.com/users')
+            .then(response => response.json())
+            .then(json => setUsers(json))
+    }
+
+    const [users, setUsers] = useState([]);
+
     return (
-        <div className="tile is-ancestor tile-margin-top">
-            <div className="tile is-4 is-vertical is-parent">
-                <div className="tile is-child box">
-                    <h2 className="title">Lorem ipsum</h2>
-                    <p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to
-                        demonstrate the visual form of a document or a typeface without relying on meaningful
-                        content.</p>
-                    <img src="https://via.placeholder.com/850x500" alt="placeholder"/>
+        <>
+            <div className="tile is-ancestor">
+                <div className="tile is-parent">
+                    <article className="tile is-child box">
+                        <p className="title">Counter</p>
+                        <p>Enter number of steps you want to decrease or increase counter. Default step is 2.</p>
+                        <div className="level-item counter-pdg1">
+                            <LeftHand
+                                count={count}
+                                changeCount={clickHandler}
+                                step={step}
+                            />
+                            <RightHand rightData={count} />
+                        </div>
+                        <div className="level-item counter-pdg2">
+                            <StepConfig onStepChange={onStepChange}/>
+                        </div>
+                        <div id="error-msg"></div>
+                    </article>
                 </div>
-                <div className="tile is-child box">
-                    <h2 className="title">Counter</h2>
-                    <LeftHand 
-                        count={count} 
-                        changeCount={clickHandler}
-                        step={step}
-                    />
-                    <RightHand rightData={count} />
-                    <StepConfig onStepChange={onStepChange}/>
-                    <div id="error-msg"></div>
+                <div className="tile is-parent">
+                    <article className="tile is-child box">
+                        <p className="title">Counter 2</p>
+                        <Counter2 />
+                    </article>
+                </div>
+            </div>
+            <div className="tile is-ancestor">
+                <div className="tile is-parent">
+                    <article className="tile is-child box">
+                        <Counter3 />
+                    </article>
                 </div>
             </div>
             <div className="tile is-parent">
-                <div className="tile is-child box">
-                    <h2 className="title">ToDo list</h2>
-                    <section className="box">
-                        <TodoInput handleClick={handleChange}/>
-                        <ListOfItems />
-                    </section>
+                <article className="tile is-child box">
+                    <p className="title">Counter4</p>
+                    <Counter4 />
+                </article>
+            </div>
+            <div className="tile is-ancestor">
+                <div className="tile is-parent">
+                    <article className="tile is-child box">
+                        <div className="content">
+                            <p className="title">Fetching data on btn click</p>
+                            <button className="button" onClick={load}>fetch data</button>
+                            <ul>
+                                {users.map(el => <li key={el.id}>{el.name}</li>)}
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+                <div className="tile is-parent">
+                    <article className="tile is-child box">
+                        <div className="content">
+                            <p className="title">Breakout 2d</p>
+                            {/*TODO: <StartPage />*/}
+                        </div>
+                    </article>
                 </div>
             </div>
-        </div>
+            <div className="tile is-ancestor">
+                <div className="tile is-parent">
+                    <article className="tile is-child box">
+                        <p className="title">simple ToDo list</p>
+                        <section className="box">
+                            <SimpleToDo />
+                        </section>
+                    </article>
+                    <article className="tile is-child box">
+                        <p className="title">ToDo list</p>
+                        <section className="box">
+                            <TodoInput handleClick={handleChange}/>
+                            <ListOfItems />
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </>
     );
 }
 

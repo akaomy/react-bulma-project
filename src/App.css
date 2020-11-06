@@ -2,7 +2,7 @@
     margin-top: 10%;
 }
 
-.navbar-footer-wrapper {
+.navbar-footer--wrapper {
     list-style: none;
     display: inline-block;
 }
@@ -15,7 +15,7 @@
     padding: 10px 0;
 }
 
-.listItem-checkbox {
+.listItem--checkbox {
     margin-right: 15px;
 
 }
@@ -26,4 +26,41 @@
 
 .delete.is-small {
     top: 5px;
+}
+/* Counter */
+
+.counter-pdg1 {
+    padding: 40px;
+}
+
+.counter-pdg2 {
+    padding: 10px;
+}
+
+/*Counter 3*/å
+
+.counter3--init-val {
+    margin: 20px;
+    text-align: center;
+}
+
+.button {
+    margin: 0 10px;
+}
+
+.counter-btn:hover {
+    background-color: #00d1b2;
+    color: white;
+    border: none;
+}
+
+.container-test {
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+/* Counter 4*/
+
+.cntr4 {
+    margin: 5px;
 }
