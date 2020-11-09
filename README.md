@@ -1,4 +1,4 @@
-This project is created as a playground from small subprojects that are built on React
+This project is created as a playground for small subprojects that are built on React
 
 ## To run
 
