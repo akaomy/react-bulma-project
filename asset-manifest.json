@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/react-bulma-project/static/css/main.56490fd6.chunk.css",
+    "main.js": "/react-bulma-project/static/js/main.4b0db014.chunk.js",
+    "main.js.map": "/react-bulma-project/static/js/main.4b0db014.chunk.js.map",
+    "runtime-main.js": "/react-bulma-project/static/js/runtime-main.f9a384a3.js",
+    "runtime-main.js.map": "/react-bulma-project/static/js/runtime-main.f9a384a3.js.map",
+    "static/css/2.920bdfdc.chunk.css": "/react-bulma-project/static/css/2.920bdfdc.chunk.css",
+    "static/js/2.4c585d3b.chunk.js": "/react-bulma-project/static/js/2.4c585d3b.chunk.js",
+    "static/js/2.4c585d3b.chunk.js.map": "/react-bulma-project/static/js/2.4c585d3b.chunk.js.map",
+    "index.html": "/react-bulma-project/index.html",
+    "precache-manifest.aeccbdccfbaadca1bfb2b981468f9e32.js": "/react-bulma-project/precache-manifest.aeccbdccfbaadca1bfb2b981468f9e32.js",
+    "service-worker.js": "/react-bulma-project/service-worker.js",
+    "static/css/2.920bdfdc.chunk.css.map": "/react-bulma-project/static/css/2.920bdfdc.chunk.css.map",
+    "static/css/main.56490fd6.chunk.css.map": "/react-bulma-project/static/css/main.56490fd6.chunk.css.map",
+    "static/js/2.4c585d3b.chunk.js.LICENSE.txt": "/react-bulma-project/static/js/2.4c585d3b.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f9a384a3.js",
+    "static/css/2.920bdfdc.chunk.css",
+    "static/js/2.4c585d3b.chunk.js",
+    "static/css/main.56490fd6.chunk.css",
+    "static/js/main.4b0db014.chunk.js"
+  ]
+}
