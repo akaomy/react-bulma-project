@@ -2,6 +2,8 @@ import React from 'react';
 import '../Scoreboard/index.css';
 import Header from './Header';
 import Player from './Player';
+import AddPlayerForm from './AddPlayerForm';
+
 
 export default class ScoreboardContainer extends React.Component {
     state = {
@@ -22,7 +24,7 @@ export default class ScoreboardContainer extends React.Component {
             <div className="">
                 <Header />
                 <Player players={this.state.players}/>
-                <p>AddPlayerForm</p>
+                <AddPlayerForm />
             </div>
         )
     }
