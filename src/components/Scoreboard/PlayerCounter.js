@@ -1,10 +1,10 @@
 import React from 'react';
 
-export default function PlayerCounter(props) {
+export default function PlayerCounter() {
     return (
         <>
             <span>+</span>
-            <span>{props.players.length}</span>
+            <span>0</span>
             <span>-</span>
         </>
     );

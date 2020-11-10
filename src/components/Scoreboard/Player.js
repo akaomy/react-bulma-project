@@ -7,7 +7,7 @@ export default function Player(props) {
             {props.players.map(p => {
                 return <p>{p.name}</p>
             })}
-            <PlayerCounter players={props.players}/>
+            <PlayerCounter/>
         </div>
     );
 }

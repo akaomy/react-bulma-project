@@ -1,10 +1,10 @@
 import React from 'react';
 
-export default function Stats() {
+export default function Stats(props) {
     return (
         <div>
-            <p>Players:</p>
-            <p>Total Points:</p>
+            <p>Players:{props.players.length}</p>
+            <p>Total Points:0</p> {/*props.players.score*/}
         </div>
     );
 }
