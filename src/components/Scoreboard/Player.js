@@ -3,11 +3,11 @@ import PlayerCounter from './PlayerCounter';
 
 export default function Player(props) {
     return (
-        <>
+        <div className="columns">
             {props.players.map(p => {
                 return <p>{p.name}</p>
             })}
             <PlayerCounter players={props.players}/>
-        </>
+        </div>
     );
 }

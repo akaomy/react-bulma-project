@@ -4,7 +4,7 @@ import Stopwatch from './Stopwatch';
 
 export default function Header() {
     return (
-        <div>
+        <div className="columns">
             <Stats />
             <Stopwatch />
         </div>
