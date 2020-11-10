@@ -4,7 +4,7 @@ import Stopwatch from './Stopwatch';
 
 export default function Header(props) {
     return (
-        <div className="columns">
+        <div className="columns header">
             <Stats players={props.players}/>
             <Stopwatch />
         </div>

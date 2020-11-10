@@ -3,7 +3,7 @@ import PlayerCounter from './PlayerCounter';
 
 export default function Player(props) {
     return (
-        <div className="columns">
+        <div className="columns player">
             {props.players.map(p => {
                 return <p>{p.name}</p>
             })}

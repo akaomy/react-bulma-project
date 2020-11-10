@@ -75,13 +75,25 @@ input[type=submit] {
 
 /* COMPONENT STYLES -------------------- */
 
-/* .scoreboard {
-  background: #fff;
+.scoreboardContainer {
+  margin: 20px auto;
+  border: 10px rgb(99, 173, 243) dashed;
+  border-radius: 5px;
   width: 700px;
-  margin: 70px auto;
-  box-shadow: 0 2px 0 rgb(133, 104, 250);
-  border-radius: 6px;
   overflow: hidden;
+  box-shadow: 10px 10px 15px rgb(199, 199, 199);
+}
+
+.header {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  padding: 30px;
+  border-bottom: 2px solid rgba(210, 218, 221, 0.794);
+}
+
+.add-player-form {
+  padding: 20px;
 }
 
 .player {
@@ -89,12 +101,13 @@ input[type=submit] {
   font-size: 1.2em;
   border-bottom: solid 2px #EEEEEE;
   letter-spacing: 2px;
-} */
-
-/* .player:last-of-type {
+  padding: 5px 20px;
+}
+/*
+.player:last-of-type {
   border-bottom-color: #D4CAFF;
 }
-
+ 
 .player-name:hover .remove-player {
   visibility: visible;
 }

@@ -21,7 +21,7 @@ export default class ScoreboardContainer extends React.Component {
     ]}
     render () {
         return (
-            <div className="">
+            <div className="scoreboardContainer">
                 <Header players={this.state.players}/>
                 <Player players={this.state.players}/>
                 <AddPlayerForm />
