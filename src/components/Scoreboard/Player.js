@@ -1,11 +1,13 @@
 import React from 'react';
 import PlayerCounter from './PlayerCounter';
 
-export default function Player() {
+export default function Player(props) {
     return (
         <>
-            <p>John Doe</p>
-            <PlayerCounter />
+            {props.players.map(p => {
+                return <p>{p.name}</p>
+            })}
+            <PlayerCounter players={props.players}/>
         </>
     );
 }
