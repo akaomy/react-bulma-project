@@ -19,6 +19,11 @@ export default class ScoreboardContainer extends React.Component {
             score: 0
         }
     ]}
+    
+    updateScore = (delta, index) => {
+        console.log('score is updated: ', delta, index)
+    }
+
     render () {
         return (
             <div className="scoreboardContainer">
@@ -29,6 +34,7 @@ export default class ScoreboardContainer extends React.Component {
                     return (
                     <Player 
                         players={this.state.players}
+                        updateScore={this.updateScore}
                 />
                     )
                 } )}

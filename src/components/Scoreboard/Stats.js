@@ -7,8 +7,8 @@ export default function Stats(props) {
     }, 0)
     return (
         <div className="stats">
-            <p>Players:{props.players.length}</p>
-            <p>Total Points: {totalScore}</p> {/*props.players.score*/}
+            <p>Players: {props.players.length}</p>
+            <p>Total Points: {totalScore}</p>
         </div>
     );
 }

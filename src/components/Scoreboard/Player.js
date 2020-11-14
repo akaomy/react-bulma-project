@@ -13,6 +13,7 @@ export default function Player(props) {
             Player Name
           </span>
           <PlayerCounter 
+            updateScore={props.updateScore}
           />
         </div>
     );
