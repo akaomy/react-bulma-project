@@ -2,12 +2,13 @@ import React from 'react';
 import PlayerCounter from './PlayerCounter';
 
 export default class Player extends React.Component {
-  
+
     render() {
       const {
         score,
         index,
-        updateScore
+        updateScore,
+        name
       } = this.props;
 
       return (
@@ -16,7 +17,7 @@ export default class Player extends React.Component {
             <button 
               className="remove-player" 
             >x</button>
-            Player Name
+            {name}
           </span>
           <PlayerCounter 
             score={score}

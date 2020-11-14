@@ -15,12 +15,17 @@ export default class ScoreboardContainer extends React.Component {
         },
         {
             id: 2,
-            name: 'Ann Smith',
+            name: 'Ann Smth',
             score: 0
         }
     ]}
     
     updateScore = (delta, index) => {
+        this.setState(prevState => {
+            return {
+                score: prevState.players[index].score += delta
+            }
+        })
         console.log('score is updated: ', delta, index)
     }
 
@@ -35,6 +40,11 @@ export default class ScoreboardContainer extends React.Component {
                     <Player 
                         players={this.state.players}
                         updateScore={this.updateScore}
+                        score={player.score}
+                        index={i}
+                        key={player.id}
+                        id={player.id}
+                        name={player.name} 
                 />
                     )
                 } )}
