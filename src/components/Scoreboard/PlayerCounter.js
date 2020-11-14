@@ -1,17 +1,17 @@
 import React from 'react';
 
-export default function PlayerCounter(props) {
+export default function PlayerCounter({ index, score, updateScore }) {
     return (
         <div className="counter">
             <button
-                onClick={() => props.updateScore(1, 2)}
+                onClick={() => updateScore(index, +1)}
                 className="counter-action decrement" 
             >+</button>
             <span 
                 className="counter-score"
-            >0</span>
+            >{score}</span>
             <button
-                onClick={() => props.updateScore(-1, -2)}
+                onClick={() => updateScore(index, -1)}
                 className="counter-action increment"
             >-</button>
         </div>
